@@ -245,6 +245,13 @@ var osc = audioCtx.createOscillator();
     osc.stop(audioCtx.currentTime + 0.04);
             });
         }
+        function OLYG(abc){
+            document.getElementById("oly").style.display = "block";
+            document.getElementById("yz1").innerText = abc;
+            document.getElementById("o").style.display = "none";
+            document.getElementById("h").style.display = "none";
+            document.getElementById("a").style.display = "none";
+        }
         function B1(){
     en -= 1;
     ka += 3;
@@ -280,7 +287,6 @@ en -= 3;
     km -= 24;
     ks += 10;
     document.getElementById("a1").style.display = "none";
-alert("Unicorn: " + tryc + " is using the browser and cares about me from " + chz + ". Why don’t you care about me?");
 setTimeout(function(){
     document.getElementById("snc2").style.display = "block";
 }, Math.round(Math.random() * 30000));
@@ -363,8 +369,7 @@ setTimeout(function(){
     document.getElementById("yz1").innerHTML = "The Unicorn Elimination Force captured the unicorn.";
         }
         function SNC12(){
-            alert("Unicorn: The person using the " + tryc + " browser, I will kick you out of the game");
-            window.location.href = "about:blank";
+            OLYG("Unicorn: The person using the " + tryc + " browser, I will restart you out of the game");
         }
         setInterval(function(){
             ka -= 2;
@@ -386,12 +391,6 @@ if(ka <= 20){
     km -= 3;
 }
         }, 1000);
-        function OLYG(){
-            document.getElementById("oly").style.display = "block";
-            document.getElementById("o").style.display = "none";
-            document.getElementById("h").style.display = "none";
-            document.getElementById("a").style.display = "none";
-        }
         setInterval(function(){
 document.getElementById("b").style.height = ka * 2 + "px";
 document.getElementById("c").style.height = km * 2 + "px";
@@ -410,20 +409,16 @@ if(oldm2 == "neam"){
     ks += 1;
 }
 if(ks >= 100){
-    alert("Unicorn: Why do you make me angry?");
-    window.location.href = "about:blank";
+    OLYG("Unicorn: Why do you make me angry?");
 }
 else if(ks <= 30 && en >= 80 && km >= 100 && ka >= 60){
-    OLYG();
-    document.getElementById("yz1").innerHTML = "You made it, bro";
+    OLYG("You made it, bro");
 }
 else if(en <= 0){
-    OLYG();
-    document.getElementById("yz1").innerHTML = "You are very tired.";
+    OLYG("You are very tired");
 }
 else if(ka <= 0){
-    OLYG();
-    document.getElementById("yz1").innerHTML = "The unicorn is very hungry.You failed, the person using the " + tryc + " Browser.";
+    OLYG("The unicorn is very hungry.You failed, the person using the " + tryc + " Browser.");
 }
         }, 200);
         function BT(){
