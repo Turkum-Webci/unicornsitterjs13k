@@ -109,7 +109,7 @@ display: none;
     </style>
 </head>
 <body>
-    <button onclick='alert("Hello! Let me tell you about the game: \n The blue bar represents the unicorn’s hunger. \n The green bar represents the unicorn’s happiness. \n The red bar represents the unicorn’s anger. \n The yellow bar represents your energy. \n Winning conditions in the game: \n Anger must be below 30. \n Energy must be above 80. \n Happiness must be above 100. \n Hunger must be above 60.");'>About</button>
+    <p id="ğ"></p>
     <div id="oly">
         <h2 id="yz1"></h2>
         <button onclick="BT()">Okay</button>
@@ -185,6 +185,7 @@ display: none;
         var o = "neam";
         var chz,tryc;
         var oldm2 = "la";
+        document.getElementById("ğ").innerText = "Hello! Let me tell you about the game: \n The blue bar represents the unicorn’s hunger. \n The green bar represents the unicorn’s happiness. \n The red bar represents the unicorn’s anger. \n The yellow bar represents your energy. \n Winning conditions in the game: \n Anger must be below 30. \n Energy must be above 80. \n Happiness must be above 100. \n Hunger must be above 60.";
         var audioCtx = null;
         console.log("As-salamu alaykum.");
         if(navigator.userAgent.toLowerCase().includes("mobile") ||navigator.userAgent.toLowerCase().includes("android") ||navigator.userAgent.toLowerCase().includes("iphone")){
