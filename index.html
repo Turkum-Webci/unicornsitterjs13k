@@ -107,11 +107,9 @@ display: none;
     display: none;
 }
     </style>
-    <script>
-        alert("Hello! Let me tell you about the game: \n The blue bar represents the unicorn’s hunger. \n The green bar represents the unicorn’s happiness. \n The red bar represents the unicorn’s anger. \n The yellow bar represents your energy. \n Winning conditions in the game: \n Anger must be below 30. \n Energy must be above 80. \n Happiness must be above 100. \n Hunger must be above 60.");
-    </script>
 </head>
 <body>
+    <button onclick='alert("Hello! Let me tell you about the game: \n The blue bar represents the unicorn’s hunger. \n The green bar represents the unicorn’s happiness. \n The red bar represents the unicorn’s anger. \n The yellow bar represents your energy. \n Winning conditions in the game: \n Anger must be below 30. \n Energy must be above 80. \n Happiness must be above 100. \n Hunger must be above 60.");'>About</button>
     <div id="oly">
         <h2 id="yz1"></h2>
         <button onclick="BT()">Okay</button>
@@ -187,7 +185,7 @@ display: none;
         var o = "neam";
         var chz,tryc;
         var oldm2 = "la";
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var audioCtx = null;
         console.log("As-salamu alaykum.");
         if(navigator.userAgent.toLowerCase().includes("mobile") ||navigator.userAgent.toLowerCase().includes("android") ||navigator.userAgent.toLowerCase().includes("iphone")){
 chz = "Mobile";
@@ -213,7 +211,14 @@ tryc = "?";
         var btns = document.getElementsByTagName("button");
         for(var i = 0;i < btns.length;i++){
             btns[i].addEventListener("click", function(){
-                var random3 = Math.random();
+                if (!audioCtx) {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        
+        if (audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+        var random3 = Math.random();
 var osc = audioCtx.createOscillator();
     var gain = audioCtx.createGain();
 
